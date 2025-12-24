@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rushikesh Ghatul | Software Engineer Portfolio</title>
     
+    <!-- GENERATED FAVICON: RG Logo (Dark bg, Blue Text) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0b10'/><rect x='5' y='5' width='90' height='90' rx='15' fill='none' stroke='%232f81f7' stroke-width='6'/><text x='50' y='65' font-family='sans-serif' font-weight='900' font-size='50' text-anchor='middle' fill='%232f81f7'>RG</text></svg>">
+
     <!-- Fonts: Inter (Clean, Modern, Developer-friendly) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Icons: FontAwesome -->
@@ -117,10 +120,10 @@
 
         /* --- LAYOUT SECTIONS --- */
         section {
-            padding: 100px 5%; /* Top/Bottom padding for consistency */
+            padding: 100px 5%;
             max-width: 1100px;
             margin: 0 auto;
-            min-height: 80vh; /* Gives breathability */
+            min-height: 80vh; 
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -152,7 +155,7 @@
 
         /* --- HERO --- */
         .hero {
-            min-height: 100vh; /* Full viewport */
+            min-height: 100vh;
             align-items: flex-start;
             padding-top: var(--nav-height);
         }
@@ -470,7 +473,7 @@
             <h2><span>03.</span> Notable Projects</h2>
         </div>
         
-        <!-- Project Card 1 -->
+        <!-- Project Card 1: Faculty Portal -->
         <div class="project-card">
             <div class="project-top">
                 <div class="folder-icon"><i class="far fa-folder"></i></div>
@@ -538,7 +541,7 @@
         // 1. SCROLL OBSERVER (ANIMATIONS)
         const observerOptions = {
             root: null,
-            threshold: 0.15, // Trigger when 15% of element is visible
+            threshold: 0.15,
             rootMargin: "0px"
         };
 
@@ -546,15 +549,12 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('show-el');
-                    // Optional: Stop observing once shown
-                    // observer.unobserve(entry.target); 
                 }
             });
         }, observerOptions);
 
         const hiddenElements = document.querySelectorAll('.hidden-el');
         hiddenElements.forEach((el) => observer.observe(el));
-
 
         // 2. ACTIVE NAV LINK HIGHLIGHTER
         const sections = document.querySelectorAll('section');
@@ -564,8 +564,7 @@
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - 200)) {
+                if (pageYOffset >= (sectionTop - 250)) {
                     current = section.getAttribute('id');
                 }
             });
