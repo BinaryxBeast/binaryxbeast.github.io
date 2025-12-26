@@ -8,10 +8,6 @@ A modern, responsive, and minimalist personal portfolio website designed for asp
 
 ---
 
-## 🚀 Live Demo
-
-<!-- Replace the link below with your actual deployed URL (e.g., Vercel, Netlify, or GitHub Pages) -->
-[**View Live Demo**](https://your-username.github.io/repository-name)  
 
 ---
 
