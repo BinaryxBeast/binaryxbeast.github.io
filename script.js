@@ -1,67 +1,66 @@
-// 1. SCROLL OBSERVER (ANIMATIONS)
-// This adds the "fade-up" effect as you scroll down
+// 1. Scroll Progress & Glow
+const progress = document.getElementById('scroll-progress');
+const glow = document.getElementById('cursor-glow');
+
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    if (progress) {
+        progress.style.width = scrolled + "%";
+    }
+});
+
+document.addEventListener('mousemove', (e) => {
+    if (glow) {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+    }
+});
+
+// 2. Reveal on Scroll
 const observerOptions = {
-    root: null,
-    threshold: 0.15, // Trigger when 15% of the element is visible
-    rootMargin: "0px"
+    threshold: 0.15
 };
 
-const observer = new IntersectionObserver((entries, observer) => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('show-el');
-            // If you want animations to run only once, uncomment line below:
-            // observer.unobserve(entry.target); 
+            entry.target.classList.add('active');
         }
     });
 }, observerOptions);
 
-// Select all elements with the 'hidden-el' class and start observing them
-const hiddenElements = document.querySelectorAll('.hidden-el');
-hiddenElements.forEach((el) => observer.observe(el));
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+// 3. Terminal Cursor Blink Effect
+const cursor = document.getElementById('cursor');
+if (cursor) {
+    setInterval(() => {
+        cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+    }, 500);
+}
 
-// 2. ACTIVE NAV LINK HIGHLIGHTER
-// Highlights the correct menu item based on which section you are viewing
+// 4. Navigation Active State Highlighting
+const navLinks = document.querySelectorAll('.nav-links a');
 const sections = document.querySelectorAll('section');
-const navLi = document.querySelectorAll('.nav-links li a');
 
 window.addEventListener('scroll', () => {
-    let current = '';
-    
+    let current = "";
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        // Offset -250px helps trigger the active state a bit earlier while scrolling
-        if (pageYOffset >= (sectionTop - 250)) {
+        if (pageYOffset >= sectionTop - 150) {
             current = section.getAttribute('id');
         }
     });
 
-    navLi.forEach(li => {
-        li.classList.remove('active');
-        if (li.getAttribute('href').includes(current)) {
-            li.classList.add('active');
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+            link.classList.add('active');
         }
     });
 });
 
-
-// 3. MOBILE MENU TOGGLE
-// Opens/closes the hamburger menu on small screens
-const menuToggle = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-
-if(menuToggle){
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-active');
-    });
-}
-
-// Close mobile menu when a specific link is clicked
-navLi.forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('nav-active');
-    });
-});
+// 5. Mobile Accessibility Note:
+// If adding a hamburger menu later, remember to toggle 'active' class on .nav-links
