@@ -1,183 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="googleaf7ebc46de7310e6.html" />
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rushikesh Ghatul | Software Engineer Portfolio</title>
+    <title>Rushikesh Ghatul | Software Engineer</title>
     
-    <!-- GENERATED FAVICON: RG Logo (Dark bg, Blue Text) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0b10'/><rect x='5' y='5' width='90' height='90' rx='15' fill='none' stroke='%232f81f7' stroke-width='6'/><text x='50' y='65' font-family='sans-serif' font-weight='900' font-size='50' text-anchor='middle' fill='%232f81f7'>RG</text></svg>">
+    <!-- FAVICON -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%230f172a'/><text x='50' y='65' font-family='monospace' font-weight='bold' font-size='50' text-anchor='middle' fill='%2360a5fa'>&gt;_</text></svg>">
 
-    <!-- Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons: FontAwesome -->
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Link to CSS File -->
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAV BAR -->
-    <header>
-        <nav>
-            <div class="logo"><a href="#home">Rushikesh<span>.dev</span></a></div>
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="scroll-progress"></div>
+    <div id="cursor-glow"></div>
 
-    <!-- 1. HERO SECTION -->
-    <section id="home" class="hero hidden-el">
-        <h4>Hi, my name is</h4>
-        <h1>Rushikesh Ghatul.</h1>
-        <h3>Aspiring Software Engineer.</h3>
-        <p>I am a B.Tech Computer Science student (Batch 2029) at Vishwakarma University. I build efficient software solutions and enjoy the intersection of logic (C/C++, Linux) and design (Figma).</p>
-        <div class="btn-container">
-            <a href="#projects" class="btn btn-primary">Check out my work</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
+    <nav>
+        <div class="logo">Rushikesh Ghatul [Portfolio]</div>
+        <div class="nav-links">
+            <a href="#home">/root</a>
+            <a href="#about">/about</a>
+            <a href="#skills">/bin</a>
+            <a href="#projects">/work</a>
+            <a href="#contact">/echo</a>
         </div>
-    </section>
+    </nav>
 
-    <!-- 2. ABOUT SECTION -->
-    <section id="about" class="hidden-el">
-        <div class="section-header">
-            <h2><span>01.</span> About Me</h2>
-        </div>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Hello! I'm Rushikesh, an engineering student with a strong curiosity for how computers solve problems. My journey began with C++ and has evolved into a passion for system-level programming and clean software architecture.</p>
-                <p>Currently, I am focusing on building a strong foundation in Data Structures, Algorithms, and Operating Systems via Linux.</p>
-                <p>Here are a few technologies I've been working with recently:</p>
-                <ul class="about-highlights">
-                    <li>C / C++</li>
-                    <li>Linux System</li>
-                    <li>HTML/CSS</li>
-                    <li>Figma (UI Design)</li>
-                    <li>Prompt Engineering</li>
-                    <li>Git & GitHub</li>
-                </ul>
+    <!-- HERO -->
+    <section id="home">
+        <div class="hero-container reveal">
+            <div class="hero-content">
+                <h4>// Init Portfolio</h4>
+                <h1>Rushikesh<br><span style="color:var(--primary)">Ghatul</span></h1>
+                <p>Computer Science Engineer (2029) focused on high-performance C++ systems, Linux kernel tinkering, and clean architecture.</p>
+                <a href="#projects" class="btn">View_Archive.tar.gz</a>
             </div>
-        </div>
-    </section>
-
-    <!-- 3. SKILLS SECTION -->
-    <section id="skills" class="hidden-el">
-        <div class="section-header">
-            <h2><span>02.</span> My Toolkit</h2>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <i class="fab fa-cuttlefish"></i>
-                <span>C Language</span>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-code"></i>
-                <span>C++ / CPP</span>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-linux"></i>
-                <span>Linux CLI</span>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-git-alt"></i>
-                <span>Git Version Control</span>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-figma"></i>
-                <span>Figma UI</span>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-brain"></i>
-                <span>Algorithms</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. PROJECTS SECTION -->
-    <section id="projects" class="hidden-el">
-        <div class="section-header">
-            <h2><span>03.</span> Notable Projects</h2>
-        </div>
-        
-        <!-- Project Card 1: Faculty Portal -->
-        <div class="project-card">
-            <div class="project-top">
-                <div class="folder-icon"><i class="far fa-folder"></i></div>
-                <div class="links">
-                    <!-- GitHub Link -->
-                    <a href="https://github.com/BinaryxBeast/Faculty-Portal/" target="_blank"><i class="fab fa-github"></i></a>
-                    <!-- Live Demo Link -->
-                    <a href="https://binaryxbeast.github.io/Faculty-Portal/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                    <span style="margin-left: 10px; opacity: 0.5;">bash — 80x24</span>
+                </div>
+                <div class="terminal-body" id="terminal-text">
+                    <span class="t-green">guest@portfolio:~$</span> neofetch<br>
+                    <span class="t-blue">NAME:</span> Rushikesh Ghatul<br>
+                    <span class="t-blue">STATUS:</span> Engineering Student<br>
+                    <span class="t-blue">MAJOR:</span> Computer Science<br>
+                    <span class="t-blue">LOCATION:</span> Pune, India<br>
+                    <span class="t-blue">SHELL:</span> zsh / bash<br>
+                    <span class="t-blue">OS:</span> Linux (Arch/Debian)<br>
+                    <span class="t-green">guest@portfolio:~$</span> <span id="cursor">_</span>
                 </div>
             </div>
-            <h3>Faculty Portal System</h3>
-            <p>A comprehensive web portal designed for university faculty to track academic records. It enables grading oversight, attendance tracking, and efficient student data management in a dashboard view.</p>
-            <div class="tech-stack">
-                <span>HTML</span>
-                <span>Web Design</span>
-                <span>System Analysis</span>
-            </div>
-        </div>
-
-        <p style="text-align:center; font-family: monospace; color: var(--accent);">More projects are in the pipeline...</p>
-    </section>
-
-    <!-- 5. EDUCATION SECTION -->
-    <section id="education" class="hidden-el">
-        <div class="section-header">
-            <h2><span>04.</span> Education History</h2>
-        </div>
-        <div class="timeline">
-            <div class="edu-item">
-                <h3>B.Tech in Computer Science</h3>
-                <h4>Vishwakarma University</h4>
-                <span>2025 - 2029 (Expected)</span>
-                <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.95rem;">
-                    Focusing on core CS fundamentals, problem-solving, and system design. Active participant in technical workshops and coding clubs.
-                </p>
-            </div>
         </div>
     </section>
 
-    <!-- 6. CONTACT SECTION -->
-    <section id="contact" class="contact hidden-el">
-        <div class="section-header">
-            <h2 style="justify-content: center;"><span>05.</span> Get In Touch</h2>
+    <!-- ABOUT -->
+    <section id="about">
+        <span class="section-tag">01. Metadata</span>
+        <h2 class="reveal">About the Engineer</h2>
+        <div class="project-card reveal">
+            <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-dim);">
+                I am an aspiring Software Engineer currently pursuing my B.Tech at Vishwakarma University. 
+                Unlike traditional developers who jump straight to frameworks, I spent my early days understanding 
+                how memory works in <span style="color:var(--primary)">C/C++</span> and why <span style="color:var(--primary)">Linux</span> powers the world.
+                <br><br>
+                My philosophy is simple: **Build for performance, design for people.** Whether I'm designing a UI in Figma or debugging a system-level utility, I aim for mathematical precision and visual elegance.
+            </p>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <span class="section-tag">02. Dependencies</span>
+        <h2 class="reveal">Core Toolkit</h2>
+        <div class="bento-grid reveal">
+            <div class="bento-item item-large">
+                <i class="fas fa-microchip"></i>
+                <div>
+                    <h3>Systems Engineering</h3>
+                    <p>Deep knowledge of C/C++, Memory Management, and Pointer Arithmetic. Exploring OS Architecture.</p>
+                </div>
+                <div class="tech-tags">
+                    <span>C</span> <span>C++</span> <span>Algorithms</span>
+                </div>
+            </div>
+            <div class="bento-item">
+                <i class="fab fa-linux"></i>
+                <h3>Linux Systems</h3>
+                <p>Advanced CLI usage, Shell Scripting, and Environment Management.</p>
+            </div>
+            <div class="bento-item">
+                <i class="fab fa-figma"></i>
+                <h3>UI/UX Design</h3>
+                <p>Creating professional prototypes and modern design systems in Figma.</p>
+            </div>
+            <div class="bento-item item-wide">
+                <i class="fab fa-git-alt"></i>
+                <div>
+                    <h3>Workflow & Tools</h3>
+                    <p>Git version control, Prompt Engineering for productivity, and Agile methodologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <span class="section-tag">03. Executables</span>
+        <h2 class="reveal">Selected Work</h2>
+
+        <!-- Project 1: StudySpark -->
+        <div class="project-card reveal">
+            <div class="project-info">
+                <h3><i class="material-icons" style="font-size: 1.8rem;">electric_bolt</i> StudySpark</h3>
+                <p>An AI-powered academic assistant that leverages advanced LLMs to provide instant explanations, summaries, and contextual insights directly within the learning environment. Designed to eliminate manual searching and streamline the study process.</p>
+                <div class="tech-tags">
+                    <span>Gemini 2.5 Flash</span> <span>Firebase</span> <span>JavaScript</span> <span>HTML/CSS</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/BinaryxBeast/StudySpark" target="_blank" class="btn">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                    <a href="https://studyspark-ed989.firebaseapp.com/" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-external-link-alt"></i> Check Project
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2: Last Protocol -->
+        <div class="project-card reveal">
+            <div class="badge">Hackathon Winner</div>
+            <div class="project-info">
+                <h3><i class="material-icons" style="font-size: 1.8rem;">stadia_controller</i> Last Protocol</h3>
+                <p>A top-down, web-based stealth action game focused on tactical movement and silent takedowns. Navigate complex layouts using environmental cover to eliminate targets while staying outside their detection zones.</p>
+                <div class="tech-tags">
+                    <span>Tactical AI</span> <span>Game Logic</span> <span>JavaScript</span> <span>HTML5 Canvas</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/BinaryxBeast/Last-Protocol" target="_blank" class="btn">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                    <a href="https://last-protocol-nu.vercel.app/" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-external-link-alt"></i> Check Project
+                    </a>
+                </div>
+            </div>
         </div>
         
-        <div class="contact-content">
-            <p>I am currently looking for internships and collaborative opportunities for 2026. Whether you have a question or just want to say hi, my inbox is always open!</p>
-            
-            <div class="social-links">
-                <a href="https://github.com/BinaryxBeast/" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/rushikeshghatul/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:ghatulrushikesh1176@gmail.com"><i class="fas fa-envelope"></i></a>
+        <!-- Project 3: Faculty Portal -->
+        <div class="project-card reveal">
+            <div class="project-info">
+                <h3><i class="fas fa-folder-open"></i> Faculty Portal System</h3>
+                <p>A high-availability web portal for academic tracking. Optimized student data management, grade distribution visualization, and secure login protocols.</p>
+                <div class="tech-tags">
+                    <span>HTML5</span> <span>Modern CSS</span> <span>JS Engine</span> <span>System Analysis</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/BinaryxBeast/Faculty-Portal/" target="_blank" class="btn">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                    <a href="https://binaryxbeast.github.io/Faculty-Portal/" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-external-link-alt"></i> Check Project
+                    </a>
+                </div>
             </div>
+        </div>
 
-            <a href="mailto:ghatulrushikesh1176@gmail.com" class="btn btn-primary email-btn">Say Hello</a>
+        <div class="project-card reveal" style="border-style: dashed; opacity:0.7; text-align:center;">
+            <div class="project-info" style="width: 100%;">
+                <h3>Upcoming_Project.exe</h3>
+                <p>Currently engineering a simulated Operating System Kernel in C++. Follow my GitHub for build updates.</p>
+            </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="contact-box reveal">
+            <span class="section-tag">04. Echo / Talk</span>
+            <h2>Initiate Connection?</h2>
+            <p>I am currently open for collaborative research and 2026 internship opportunities. Let's build something efficient.</p>
+            
+            <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; font-size: 2rem;">
+                <a href="https://github.com/BinaryxBeast/" target="_blank" style="color:var(--text-dim);"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rushikeshghatul/" target="_blank" style="color:var(--text-dim);"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:ghatulrushikesh1176@gmail.com" style="color:var(--text-dim);"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <a href="mailto:ghatulrushikesh1176@gmail.com" class="btn" style="background:var(--primary); color:var(--bg);">Send Packet</a>
+        </div>
+    </section>
+
     <footer>
-        <p>Designed & Built by Rushikesh Ghatul</p>
-        <p>&copy; 2025 • Crafted with HTML, CSS, & JS</p>
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; opacity: 0.5;">
+            [BUILD: 2025.02.11] // ENGINEERED_BY_RUSHIKESH // NO_FRAMEWORKS_USED
+        </p>
     </footer>
 
-    <!-- Link to JS File -->
+    <!-- Script -->
     <script src="script.js"></script>
 </body>
 </html>
