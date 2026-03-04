@@ -28,8 +28,8 @@
     --gradient-silver: #94a3b8;
     --gradient-card: rgba(255, 255, 255, 0.02);
 
-    --font-main: 'Outfit', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+    --font-main: var(--font-outfit), 'Outfit', sans-serif;
+    --font-mono: var(--font-jetbrains), 'JetBrains Mono', monospace;
     --radius: 16px;
     --radius-sm: 8px;
     --radius-lg: 24px;
@@ -50,6 +50,24 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+}
+
+/* Skip-to-content link for accessibility & SEO */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--cyan);
+    color: #0f172a;
+    font-weight: 700;
+    padding: 8px 16px;
+    z-index: 10000;
+    border-radius: 0 0 8px 0;
+    transition: top 0.2s;
+}
+
+.skip-link:focus {
+    top: 0;
 }
 
 body {
@@ -244,6 +262,7 @@ img {
     border: none;
     padding: 4px;
     margin-left: auto;
+    cursor: pointer;
 }
 
 .hamburger span {
